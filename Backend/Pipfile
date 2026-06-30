@@ -18,6 +18,7 @@ django-cors-headers = "*"
 boto3 = "*"
 djangorestframework-gis = "*"
 pandas = "*"
+gunicorn = "*"
 
 [dev-packages]
 
