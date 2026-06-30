@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+djangorestframework = "*"
+django-tenants = "*"
+dj-database-url = "*"
+psycopg2-binary = "*"
+djangorestframework-simplejwt = "*"
+celery = "*"
+redis = "*"
+django-redis = "*"
+python-decouple = "*"
+django-cors-headers = "*"
+boto3 = "*"
+djangorestframework-gis = "*"
+pandas = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.13"
+python_full_version = "3.13.1"
