@@ -21,6 +21,10 @@ class Migration(migrations.Migration):
             model_name='demandprediction',
             name='forecast_product_status_idx',
         ),
+        migrations.RemoveField(
+            model_name='demandprediction',
+            name='draft_po_id',
+        ),
         migrations.AddField(
             model_name='demandprediction',
             name='confidence_score',
@@ -67,10 +71,6 @@ class Migration(migrations.Migration):
         migrations.RemoveField(
             model_name='demandprediction',
             name='average_daily_demand',
-        ),
-        migrations.RemoveField(
-            model_name='demandprediction',
-            name='draft_po_id',
         ),
         migrations.RemoveField(
             model_name='demandprediction',
