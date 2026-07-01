@@ -14,6 +14,13 @@ class ClientAdmin(TenantAdminMixin, admin.ModelAdmin):
     search_fields = ("company_name", "schema_name")
     readonly_fields = ("id", "created_at", "schema_name")
 
+    def get_readonly_fields(self, request, obj=None):
+        if obj:
+            # For existing clients, schema_name is read-only to prevent DB renaming issues
+            return self.readonly_fields
+        # For new clients, schema_name must be editable
+        return ("id", "created_at")
+
 
 @admin.register(Domain)
 class DomainAdmin(admin.ModelAdmin):
