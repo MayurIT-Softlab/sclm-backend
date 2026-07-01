@@ -69,7 +69,7 @@ class TenantRoutingService:
             )
 
         # Switch the PostgreSQL search_path for this DB connection.
-        connection.set_schema_to(schema_name)
+        connection.set_schema(schema_name)
         logger.debug("Switched schema to '%s' for tenant '%s'.", schema_name, tenant_uuid)
 
         return schema_name
