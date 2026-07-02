@@ -76,6 +76,8 @@ class JWTTenantRoutingMiddleware:
             try:
                 from apps.users.services import TenantRoutingService
                 TenantRoutingService.get_and_switch_tenant(str(tenant_id))
+                # Set URLconf dynamically to the tenant routes
+                request.urlconf = "sclm_backend.urls_tenant"
             except ValueError as exc:
                 logger.warning("Tenant routing failed: %s", exc)
                 return JsonResponse(
