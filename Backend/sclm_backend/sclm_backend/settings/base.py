@@ -98,7 +98,7 @@ MIDDLEWARE = [
 # Public (shared) schema routes tenant admin / subscription endpoints.
 PUBLIC_SCHEMA_URLCONF = "sclm_backend.urls_public"
 # Tenant schema routes all 11 operational module endpoints.
-ROOT_URLCONF = "sclm_backend.urls_tenant"
+ROOT_URLCONF = "sclm_backend.urls_public"
 
 # ---------------------------------------------------------------------------
 # WSGI
